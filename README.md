@@ -1,1 +1,5 @@
 # Lab_CES22
+
+Linguagem: Python Versão: 3.80
+
+CES-22 –Programação  Orientada  a  objetos. Requisito:  CES-10.Horas  semanais:  3-0-2-5.Conceitos de  objetos, classes,  instâncias  e  métodos.  Abstração,  herança,  encapsulamentoe  polimorfismo.  Características  de  linguagens de  tipagemestática  e  dinâmica.  Tipos  de  dados e  operadores.  Métodos  e  variáveis  estáticas.  Estruturas  de  dados orientadas  a objetose  tipos  genéricos.  Tratamento  de  exceção.  Linguagem  Unificada  de  Modelagem  (UML). Padrões  Básicos  de  Projeto.  Programação  de  interfaces  GUI. Bibliografia:DEITEL,P.;DEITEL,  H.Java:  como programar. 10. ed. São Paulo: Pearson, 2016. LARMAN, C. UtilizandoUML e padrões:uma introdução à análise e ao projeto orientados a objetos e ao desenvolvimentoiterativo.Porto Alegre: Bookman, 2006. SARAIVA, O.Introdução à orientação a objetos com C++ e Python. Uma abordagem prática. São Paulo: Novatec, 2017.
