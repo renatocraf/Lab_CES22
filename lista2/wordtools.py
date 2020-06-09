@@ -24,12 +24,9 @@ def extract_words(frase):
         elif letra in string.whitespace and palavra != "":
             palavras.append(palavra)
             palavra = ''
-    # ate aqui ele adicionou todas a palavras, menos a ultima, ja que
-    # nao aparece espaço em branco no fim da frase. com isso temos q dar
-    # mais um append ###### outra alternativa foi adicionar um " " no final da frase!
+    
 
-    #palavras.append(palavra)
-
+   
     return palavras
 
 #print(extract_words("Eu sou Renato."))
