@@ -18,7 +18,7 @@ class veiculo compoe:
                     <- Motocycle
 
 '''
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
 class Engine():
@@ -31,58 +31,70 @@ class CombustionEngine(Engine):
         self.poluicao = True
         self.name = __class__.__name__
     def getPoluicao(self) -> str:
-        return (self + " É muito poluente.")
+        return (f"{self.name}"  f" é muito poluente.")
 
 class HybridEngine(Engine):
-    pass
+    def __init__(self):
+        self.poluicao = False
+        self.name = __class__.__name__
+    def getPoluicao(self) -> str:
+        return (f"{self.name}"  f" é poluente.")
 
 class EletricEngine(Engine):
-    pass
-
+    def __init__(self):
+        self.poluicao = False
+        self.name = __class__.__name__
+    def getPoluicao(self) -> str:
+        return (f"{self.name}"  f" é pouco poluente.")
 
 class Type():
-    pass
+    @abstractmethod
+    def getName(self) ->str:
+        pass
 
 class Truck(Type):
-    pass
+    def __init__(self):
+        self.name = "Caminhão"
+    def getName(self) -> str:
+        return f"{self.name}"
 
 class Car(Type):
-    pass
+    def __init__(self):
+        self.name = "Carro"
+    def getName(self) -> str:
+        return f"{self.name}"
 
 class Motocycle(Type):
-    pass
+    def __init__(self):
+        self.name = "Moto"
+    def getName(self) -> str:
+        return f"{self.name}"
 
 class Veiculo():
-    def __init__(self,engine:Engine,type2:Type) -> None:
+    def __init__(self,engine:Engine,type2:Type):
         self.motor = engine
         self.tipo = type2
-    def getVeiculo() -> str:
-        return ("Veiculo "+"com motor"+self.motor.getPoluicao())
+    def getVeiculo(self):
+        print (f"{self.tipo.getName()}",f"com motor",f"{self.motor.getPoluicao()}")
 
-
-def client_code(abstraction: Veiculo) -> None:
-    print(abstraction.getVeiculo(), end="")
-
+def client_code(abstraction):
+    abstraction.getVeiculo()
 
 if __name__ == "__main__":
-    """
-    The client code should be able to work with any pre-configured abstraction-
-    implementation combination.
-     """
-    print("#############TESTE##############")
-
-    implementation = CombustionEngine()
-    abstraction = Engine(implementation)
-
-    implementation2 = Truck()
-    abstraction2 = Type(implementation)
-
-    client_code(abstraction,abstraction2)
-
-
-
     print("\n")
 
-    '''implementation = ConcreteImplementationB()
-    abstraction = ExtendedAbstraction(implementation)
-    client_code(abstraction)'''
+    implementation = CombustionEngine()
+    implementation2 = Truck()
+    abstraction = Veiculo(implementation,implementation2)    
+    client_code(abstraction)
+
+    implementation = EletricEngine()
+    implementation2 = Car()
+    abstraction = Veiculo(implementation,implementation2)    
+    client_code(abstraction)
+
+    implementation = HybridEngine()
+    implementation2 = Motocycle()
+    abstraction = Veiculo(implementation,implementation2)    
+    client_code(abstraction)
+    
