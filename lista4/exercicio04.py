@@ -6,14 +6,6 @@ simular a interação entre a aplicação cliente e a aplicação do Banco (Crie
 com botões para ativar os comandos. Utilize o pacote TKinter https://docs.python.org/3/library/tkinter.html). 
 A aplicação cliente deverá implementar um histórico de comandos realizados.
 '''
-'''
-Conta
-    valor
-
-    depositar
-    retirar
-
-'''
 import tkinter as tk
 from abc import abstractmethod
 
